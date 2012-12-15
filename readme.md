@@ -1,5 +1,5 @@
-p2livejournal
-=============
+p2lj
+====
 
 LJ via PHP.
 
@@ -13,16 +13,20 @@ Function needs folowing parameters:
 
 It returns an array or **false**.
 
-Array contains:  
+The array contains:  
 `itemid` – post ID,  
 `url` – post URL,  
 `anum` — authorization token.  
 
-Example of using script:
+Example:
 
-	@include '/lib/raw.p2lj.php';
+```php
 
-	if ($_POST) {
-		$post = p2lj($_POST['login'], $_POST['password'], $_POST['subject'], $_POST['message']);
-  		echo is_array($post) ? $post['url'] : 'Error while posting';
-	}
+@include '/lib/raw.p2lj.php';
+
+if ($_POST) {
+  $post = p2lj($_POST['login'], $_POST['password'], $_POST['subject'], $_POST['message']);
+  echo is_array($post) ? $post['url'] : 'Error while posting';
+}
+	
+```
