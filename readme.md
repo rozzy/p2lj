@@ -33,7 +33,7 @@ $post = p2lj(
 	'O tempora, o mores! <...>',
 	array(
 		'taglist' => 'russia, putin, bears',
-		'current_music' => 'Russia: National Anthem'
+		'current_music' => 'Russia: Drink Vodka'
 	)
 );
 echo $post ? $post['url'] : 'Putin has rejected your request';
