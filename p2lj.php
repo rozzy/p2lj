@@ -1,6 +1,6 @@
 <?php
 
-function p2lj ($login, $passw, $subj, $text, $props = false) {
+function p2lj ($username, $password, $subject, $text, $props = false) {
   error_reporting(0);
   global $xmlrpc_internalencoding;
   require 'xmlrpc.inc';
@@ -14,10 +14,10 @@ function p2lj ($login, $passw, $subj, $text, $props = false) {
   };
 
   $config = array(
-    'username' => new xmlrpcval($login, 'string'),
-    'password' => new xmlrpcval($passw, 'string'),
+    'username' => new xmlrpcval($username, 'string'),
+    'password' => new xmlrpcval($password, 'string'),
     'event' => new xmlrpcval($text, 'string'),
-    'subject' => new xmlrpcval($subj, 'string'),
+    'subject' => new xmlrpcval($subject, 'string'),
     'lineendings' => new xmlrpcval('unix', 'string'),
     'year' => new xmlrpcval(date('Y', $time), 'int'),
     'mon' => new xmlrpcval(date('m', $time), 'int'),
