@@ -27,7 +27,13 @@ Example
 @include 'p2lj.php';
 
 if ($_POST) {
-  $post = p2lj($_POST['login'], $_POST['password'], $_POST['subject'], $_POST['message'], array('taglist' => 'test, tag, example, p2lj', 'current_music' => 'Shlohmo: Big Feelings'));
+  $post = p2lj(
+  	$_POST['login'],
+  	$_POST['password'],
+  	$_POST['subject'],
+  	$_POST['message'],
+  	array('taglist' => 'test, tag, example, p2lj', 'current_music' => 'Shlohmo: Big Feelings')
+  );
   echo is_array($post) ? $post['url'] : 'Error while posting';
 }
 	
