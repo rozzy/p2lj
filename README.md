@@ -4,10 +4,11 @@ p2livejournal
 LJ via PHP.
 
 To post using this script, upload `/lib/` on your server and include `/lib/raw.p2lj.php` and use function `p2lj()`.
-Function needs folowing parameters:
-`login` — your login in LJ system,
-`passw` — password of your account,
-`subj` — subject of the entry,
+
+Function needs folowing parameters:   	
+`login` — your login in LJ system,  
+`passw` — password of your account,  
+`subj` — subject of the entry,  
 `text` — entire text.
 
 It returns an array or **false**.
