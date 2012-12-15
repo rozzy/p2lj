@@ -30,13 +30,13 @@ $post = p2lj(
 	'navalny',
 	'qwertykremlin',
 	'How to make Russia a better place to live', 
-	'Lorem ipsum dolor sit amet <...>',
+	'O tempora, o mores! <...>',
 	array(
-		'taglist' => 'russia, putin, p2lj',
-		'current_music' => 'Shlohmo: I can‘t see you'
+		'taglist' => 'russia, putin, bears',
+		'current_music' => 'Russia: National Anthem'
 	)
 );
-echo is_array($post) ? $post['url'] : 'Putin has rejected your request';
+echo $post ? $post['url'] : 'Putin has rejected your request';
 	
 ```
 
