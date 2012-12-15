@@ -18,7 +18,8 @@ The array contains:
 `url` – post URL,  
 `anum` — authorization token.  
 
-Example:
+Example
+-------
 
 ```php
 
@@ -30,3 +31,9 @@ if ($_POST) {
 }
 	
 ```
+
+License
+-------
+
+p2lj is an opensource project.  
+© 2012, under the [MIT license](http://github.com/rozzy/p2lj/blob/master/license)
