@@ -6,11 +6,11 @@ Post to [LiveJournal](http://livejournal.com) via PHP.
 To post using the script, include `p2lj.php` and use the function `p2lj()`.
 
 The function needs folowing arguments:   	
-`login` — your login in LJ system,  
-`passw` — password of your account,  
-`subj` — subject of the entry,  
-`text` — entire text,  
-`props` — array with other optional information ([all available props](http://www.livejournal.com/doc/server/ljp.csp.proplist.html)).
+`username` — your username,  
+`password` — your password,  
+`subject` — the subject of the post,  
+`text` — the entire text,  
+`props` — an array with other optional information ([all available props](http://www.livejournal.com/doc/server/ljp.csp.proplist.html)).
 
 It returns an **array** or **false**.
 
