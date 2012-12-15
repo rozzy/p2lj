@@ -33,7 +33,7 @@ $post = p2lj(
 	'Lorem ipsum dolor sit amet <...>',
 	array(
 		'taglist' => 'russia, putin, p2lj',
-		'current_music' => 'Shlohmo: I can‘t see  you'
+		'current_music' => 'Shlohmo: I can‘t see you'
 	)
 );
 echo is_array($post) ? $post['url'] : 'Error while posting';
