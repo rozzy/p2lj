@@ -9,7 +9,8 @@ The function needs folowing arguments:
 `login` — your login in LJ system,  
 `passw` — password of your account,  
 `subj` — subject of the entry,  
-`text` — entire text.
+`text` — entire text,
+`props` — array with other optional information ([all available props](http://www.livejournal.com/doc/server/ljp.csp.proplist.html)).
 
 It returns an **array** or **false**.
 
@@ -26,7 +27,7 @@ Example
 @include 'p2lj.php';
 
 if ($_POST) {
-  $post = p2lj($_POST['login'], $_POST['password'], $_POST['subject'], $_POST['message']);
+  $post = p2lj($_POST['login'], $_POST['password'], $_POST['subject'], $_POST['message'], array('taglist' => 'test, tag, example, p2lj', 'current_music' => 'Shlohmo: Big Feelings'));
   echo is_array($post) ? $post['url'] : 'Error while posting';
 }
 	
