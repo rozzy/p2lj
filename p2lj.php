@@ -1,7 +1,7 @@
 <?php
 
-function p2lj ($login, $passw, $subj, $text, $props = false) {
-  error_reporting(0);
+function p2lj ( $login, $passw, $subj, $text, $props = false ) {
+  error_reporting( 0 );
   global $xmlrpc_internalencoding;
   require 'xmlrpc.inc';
 
@@ -9,7 +9,7 @@ function p2lj ($login, $passw, $subj, $text, $props = false) {
   $time = time();
 
   $_props = array();
-  if ($props) foreach ($props as $key => $value) {
+  if ( $props ) foreach ( $props as $key => $value ) {
     $_props[$key] = new xmlrpcval( $value, 'string' );
   };
 
@@ -28,13 +28,13 @@ function p2lj ($login, $passw, $subj, $text, $props = false) {
     'props' => new xmlrpcval( $_props, 'struct' )
   );
 
-  $msg = new xmlrpcmsg('LJ.XMLRPC.postevent', array(
-    new xmlrpcval($config, 'struct')
+  $msg = new xmlrpcmsg( 'LJ.XMLRPC.postevent', array(
+    new xmlrpcval( $config, 'struct' )
   ));
 
-  $lj = new xmlrpc_client('/interface/xmlrpc', 'www.livejournal.com', 80);
+  $lj = new xmlrpc_client( '/interface/xmlrpc', 'www.livejournal.com', 80 );
   $lj->request_charset_encoding = $xmlrpc_internalencoding;
-  $result = $lj->send($msg);
+  $result = $lj->send( $msg );
 
-  return $result->faultCode() ? false : php_xmlrpc_decode($result->value());
+  return $result->faultCode() ? false : php_xmlrpc_decode( $result->value() );
 }
