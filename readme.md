@@ -36,7 +36,7 @@ $post = p2lj(
 		'current_music' => 'Shlohmo: I can‘t see you'
 	)
 );
-echo is_array($post) ? $post['url'] : 'Error while posting';
+echo is_array($post) ? $post['url'] : 'Putin has rejected your request';
 	
 ```
 
