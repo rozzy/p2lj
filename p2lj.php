@@ -1,10 +1,11 @@
 <?php
 
 function p2lj ($login, $passw, $subj, $text) {
-  
+  global $xmlrpc_internalencoding;
+
   define('PHP_XMLRPC_COMPAT_DIR', dirname(__FILE__).'/lib/');
   @require "xmlrpc.inc";
-
+  
   $xmlrpc_internalencoding = 'UTF-8';
   $date = time();
 
@@ -27,7 +28,7 @@ function p2lj ($login, $passw, $subj, $text) {
   ));
 
   $c = @new xmlrpc_client( "/interface/xmlrpc", "www.livejournal.com", 80 );
-  @$c->request_charset_encoding = "UTF-8";
+  @$c->request_charset_encoding = $xmlrpc_internalencoding;
   $r = @$c->send( $f );
 
   if ( !$r->faultCode() ) {
