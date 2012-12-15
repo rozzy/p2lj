@@ -32,7 +32,7 @@ $post = p2lj(
 	'How to make Russia a better place to live', 
 	'Lorem ipsum dolor sit amet <...>',
 	array(
-		'taglist' => 'russia, bears, p2lj',
+		'taglist' => 'russia, putin, p2lj',
 		'current_music' => 'Shlohmo: Big Feelings'
 	)
 );
