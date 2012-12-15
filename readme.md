@@ -24,21 +24,19 @@ Example
 
 ```php
 
-@include 'p2lj.php';
+require 'p2lj.php';
 
-if ($_POST) {
-  $post = p2lj(
-  	$_POST['login'],
-  	$_POST['password'],
-  	$_POST['subject'],
-  	$_POST['message'],
-  	array(
-  		'taglist' => 'test, tag, example, p2lj',
-  		'current_music' => 'Shlohmo: Big Feelings'
-  	)
-  );
-  echo is_array($post) ? $post['url'] : 'Error while posting';
-}
+$post = p2lj(
+	'navalny',
+	'qwertykremlin',
+	'How to make Russia a better place to live', 
+	'Lorem ipsum dolor sit amet <...>',
+	array(
+		'taglist' => 'russia, bears, p2lj',
+		'current_music' => 'Shlohmo: Big Feelings'
+	)
+);
+echo is_array($post) ? $post['url'] : 'Error while posting';
 	
 ```
 
