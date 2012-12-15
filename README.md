@@ -1,12 +1,12 @@
-#p2livejournal
-===================
+p2livejournal
+=============
 
-Плагин для постинга в ЖЖ с помощью PHP.
+LJ via PHP.
 
-Для того, чтобы использовать этот скрипт, загрузите папку /lib/ на сервер и используйте функцию из файла raw.E2toLJ.php
-Функция вернет массив (в случае удачи) или **false**.
+To post using this script, use the function inside `/lib/raw.E2toLJ.php`.  
+It returns an array or **false**.
 
-Массив будет содержать:
-	`itemid` – ID поста в вашей ленте,
-	`url` – ссылку на пост,
-	`anum` — авторизационный номер для поста.
+Array contains:  
+`itemid` – post ID,  
+`url` – post URL,  
+`anum` — authorization token.  
