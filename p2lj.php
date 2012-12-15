@@ -1,7 +1,13 @@
+<?php
+
 function p2lj ($login, $passw, $subj, $text) {
-  @include "lib/xmlrpc.inc";
+  
+  define('PHP_XMLRPC_COMPAT_DIR', dirname(__FILE__).'/lib/');
+  @require "lib/xmlrpc.inc";
+
   $xmlrpc_internalencoding = 'UTF-8';
   $date = time();
+
   $post = array(
     "username" => new xmlrpcval( $login, "string" ),
     "password" => new xmlrpcval( $passw, "string" ),
@@ -15,14 +21,18 @@ function p2lj ($login, $passw, $subj, $text) {
     "min" => new xmlrpcval( date( "i", $date ), "int" ),
     "ver" => new xmlrpcval( 2, "int" )
   );
+
   $f = @new xmlrpcmsg( 'LJ.XMLRPC.postevent', array(
     new xmlrpcval( $post, "struct" )
   ));
+
   $c = @new xmlrpc_client( "/interface/xmlrpc", "www.livejournal.com", 80 );
   @$c->request_charset_encoding = "UTF-8";
   $r = @$c->send( $f );
+
   if ( !$r->faultCode() ) {
     $v = php_xmlrpc_decode( $r->value() );
     return $v;
   } else return false;
+
 }
