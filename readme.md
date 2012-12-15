@@ -11,7 +11,7 @@ The function needs folowing arguments:
 `subj` — subject of the entry,  
 `text` — entire text.
 
-It returns an array or **false**.
+It returns an **array** or **false**.
 
 The array contains:  
 `itemid` – post ID,  
