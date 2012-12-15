@@ -3,7 +3,7 @@
 function p2lj ($login, $passw, $subj, $text) {
   
   define('PHP_XMLRPC_COMPAT_DIR', dirname(__FILE__).'/lib/');
-  @require "lib/xmlrpc.inc";
+  @require "xmlrpc.inc";
 
   $xmlrpc_internalencoding = 'UTF-8';
   $date = time();
