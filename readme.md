@@ -32,7 +32,10 @@ if ($_POST) {
   	$_POST['password'],
   	$_POST['subject'],
   	$_POST['message'],
-  	array('taglist' => 'test, tag, example, p2lj', 'current_music' => 'Shlohmo: Big Feelings')
+  	array(
+  		'taglist' => 'test, tag, example, p2lj',
+  		'current_music' => 'Shlohmo: Big Feelings'
+  	)
   );
   echo is_array($post) ? $post['url'] : 'Error while posting';
 }
