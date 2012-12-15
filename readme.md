@@ -1,7 +1,7 @@
 p2lj
 ====
 
-LJ via PHP.
+Post to livejournal.com via PHP.
 
 To post using the script, include `p2lj.php` and use the function `p2lj()`.
 
