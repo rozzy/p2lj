@@ -1,4 +1,4 @@
-p2lj
+p2lj [![endorse](http://api.coderwall.com/rozzy/endorsecount.png)](http://coderwall.com/rozzy)
 ====
 
 Post to [LiveJournal](http://livejournal.com) via PHP.
